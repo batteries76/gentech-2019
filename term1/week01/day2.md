@@ -259,7 +259,7 @@ put "Hello world!" onto the screen Make a new variable called 'name', set it's v
 - beer = fergus
 2. Take the calculations from earlier, and store them in variables. That is, as you do the mathematics, store each line of the calculation in a variable, and use this on the next line to calculate the next step. 
 
-*Beast Mode*
+### Beast Mode
 Running Ruby from a file —
 1. Use terminal to create a new file (e.g. `touch my-cool-app.rb`)
 2. Open the file in your code editor (e.g. `atom my-cool-app.rb`)
@@ -267,7 +267,8 @@ Running Ruby from a file —
 4. Run the code! We can do this with the `ruby` command. (e.g. `ruby my-cool-app.rb`)
 5. The code runs, but nothing is returned on the screen. Add `puts` to the start of your code and try running the code again! (e.g. `puts 1+1`)
 6. Experiment with some basic ruby!
-*Beast++*
+
+### Beast++
 1. Use interpolation to put your name on the screen
 2. Make a new variable called 'siblings', set its value to the number of siblings you have (integer) Use code to put your number of siblings on the screen. Use interpolation to pretty it up, E.g.: “Total Siblings: 3” Use code to increase your number of siblings by one.
 3. Use interpolation again to put your new number of siblings on the screen
