@@ -8,8 +8,8 @@ The idea is to reveal how the terminal commands work to help them understand a d
 ## Other admin issues
 - Canvas
 - Join all the Slack channels
-- Me
-- Other teachers
+<!-- - Me
+- Other teachers -->
 - Expectations
 - Going ahead
 - Amount of work
@@ -118,6 +118,7 @@ Even though students may not use all these services in the first 3 weeks it is i
 - [Unix commands list](https://en.wikipedia.org/wiki/List_of_Unix_commands)
 - [Hard Skills/Soft Skills](https://www.youtube.com/watch?v=0FFLFcB9xfQ)
 - [Telnet history](https://www.britannica.com/technology/Telnet)
+
 ## Challenges
 ### One: Terminal —
 Using only terminal, navigate your file system to:
@@ -142,8 +143,10 @@ Using only terminal, navigate your file system to:
 - Gems
  
 # Day 02 B — Strings & Numbers
+
 ## Outcomes
 Students to have a basic comprehension of the data type String, be able to create a string. Be able to have a basic comprehension of variables.
+
 ## On successful completion of this unit students will be able to:
 - Create a string
 - Create a comment
@@ -151,6 +154,7 @@ Students to have a basic comprehension of the data type String, be able to creat
 - Undestand a variables
 - identify snake_case vs CamelCase
 - identify meaningful variable names
+
 ## Guided instructions
 ### Strings
 - Set a variable to a string
@@ -173,7 +177,8 @@ Students to have a basic comprehension of the data type String, be able to creat
 - multiline strings ```"""``` ```BEGIN``` ```END```
 - single quote strings
 - double quote strings
-- Take students through the document page for Ruby String
+
+<!-- - Take students through the document page for Ruby String -->
 ### Numbers
 - Take students through the document page for Ruby Integer
 - integers (whole number)
@@ -192,6 +197,7 @@ Students to have a basic comprehension of the data type String, be able to creat
 - subtract assignment operator ```-=```
 - multiply assignment operator ```*=```
 - divide assignment operator ```/=```
+
 ## Next
 - Capture a string from input ```gets```
 - Discuss input/output
@@ -202,21 +208,25 @@ Students to have a basic comprehension of the data type String, be able to creat
 - float to integer ```.to_f```
 - to string ```.to_s```
 - To integer ```.to_i```
+
 ## Resources
 - [ASCII keyboard example](https://codepen.io/Ruegen/pen/WMQRYz)
 - [Ruby 2.5.0 doc String](https://ruby-doc.org/core-2.5.0/String.html)
 - [Ruby 2.5.0 doc Integer](https://ruby-doc.org/core-2.5.0/Integer.html)
 - [Ruby 2.5.0 doc Float](https://ruby-doc.org/core-2.5.0/Float.html)
+
 ## Examples
 - [Rectangle code](https://github.com/GretchS/lesson-content/blob/master/week-1/rectangle.rb)
 - [Area of a sphere code](https://github.com/GretchS/lesson-content/blob/master/week-1/area_sphere.rb)
 - [Convert farenheit to celsius code](https://github.com/GretchS/lesson-content/blob/master/week-1/temperature.rb)
+
 <!-- ## Challenges
 Day 03 - Strings and Numbers
 Gretchen’s Morning Challenges
 - check which version of ruby you have installed (if it isn’t 2.4.1, then please see a teacher)
 - create a ruby folder inside of your apps folder (if you haven’t already done so)
 - create a file inside the ruby folder called ‘strings’ with the ruby extension -->
+
 ### One: Running Ruby —
 1. Open Pry from your command line by running `pry`
 2. Try some basic math (1+1 *enter*)
@@ -237,7 +247,8 @@ Try computing these in irb —
 Why is 4.1 % 2 => 0.099. Look up in the ruby docs or google modulo
 Three:
 put "Hello world!" onto the screen Make a new variable called 'name', set it's value to your name (as a string)
-## Mores Challenges
+
+## More Challenges
 1. Describe in words the following code:
 - this_var = 0
 - this_string = "a string"
@@ -247,6 +258,7 @@ put "Hello world!" onto the screen Make a new variable called 'name', set it's v
 - nigel = “one “ + “ “two “ + “three.”
 - beer = fergus
 2. Take the calculations from earlier, and store them in variables. That is, as you do the mathematics, store each line of the calculation in a variable, and use this on the next line to calculate the next step. 
+
 *Beast Mode*
 Running Ruby from a file —
 1. Use terminal to create a new file (e.g. `touch my-cool-app.rb`)
@@ -259,8 +271,9 @@ Running Ruby from a file —
 1. Use interpolation to put your name on the screen
 2. Make a new variable called 'siblings', set its value to the number of siblings you have (integer) Use code to put your number of siblings on the screen. Use interpolation to pretty it up, E.g.: “Total Siblings: 3” Use code to increase your number of siblings by one.
 3. Use interpolation again to put your new number of siblings on the screen
-## Units
+
+<!-- ## Units
 - Data Types & Variables
 - Variables
 # TBD
-- root directory
+- root directory -->
