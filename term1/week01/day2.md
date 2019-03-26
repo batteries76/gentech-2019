@@ -4,7 +4,7 @@ The idea is to reveal how the terminal commands work to help them understand a d
 ## On successful completion of this unit students will be able to:
 - use basic commands ```mkdir``` ```cd``` ```touch```
 - have a better understanding of the terminal, bash and the file system at a high level
-- a brief understanding of SSH (Secure Shell)
+<!-- - a brief understanding of SSH (Secure Shell) -->
 ## Other admin issues
 - Canvas
 - Join all the Slack channels
@@ -202,8 +202,8 @@ Students to have a basic comprehension of the data type String, be able to creat
 - Capture a string from input ```gets```
 - Discuss input/output
 - Methods ```.chomp```  ```.strip```
-- range operator end point inclusive ```..``` (1,10) => 1 to 9
-- range operator end point exclusive ```...``` (1,10) => 1 to 10
+<!-- - range operator end point inclusive ```..``` (1,10) => 1 to 9
+- range operator end point exclusive ```...``` (1,10) => 1 to 10 -->
 - integer to float ```.to_f```
 - float to integer ```.to_f```
 - to string ```.to_s```
@@ -262,7 +262,7 @@ put "Hello world!" onto the screen Make a new variable called 'name', set it's v
 ### Beast Mode
 Running Ruby from a file —
 1. Use terminal to create a new file (e.g. `touch my-cool-app.rb`)
-2. Open the file in your code editor (e.g. `atom my-cool-app.rb`)
+2. Open the file in your code editor (e.g. `code my-cool-app.rb`)
 3. Write the same Ruby code (1+1) and save + close the file.
 4. Run the code! We can do this with the `ruby` command. (e.g. `ruby my-cool-app.rb`)
 5. The code runs, but nothing is returned on the screen. Add `puts` to the start of your code and try running the code again! (e.g. `puts 1+1`)
