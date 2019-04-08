@@ -5,7 +5,7 @@
 This is a document to try to help people get through the basics around datatypes and data structures. Ruby operates a bit differently behind the scenes, but for now this way of thinking about the basics of ruby might be helpful. In the future we can reexamine some of these ideas in light of ruby’s OO design.
 
 In a way I could teach this by rote, or you could be drilled into understanding:
-```ruby 5``` - this is a integer datatype, and its value is five.
+`5` - this is a integer datatype, and its value is five.
 `12` - this is an integer datatype, and its value is twelve.
 `2000` - this is an integer datatype, and its value is two thousand.
 `3.2` - this is a float datatype, and its value is three point two.
