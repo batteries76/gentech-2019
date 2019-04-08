@@ -5,7 +5,7 @@
 This is a document to try to help people get through the basics around datatypes and data structures. Ruby operates a bit differently behind the scenes, but for now this way of thinking about the basics of ruby might be helpful. In the future we can reexamine some of these ideas in light of ruby’s OO design.
 
 In a way I could teach this by rote, or you could be drilled into understanding:
-`5` - this is a integer datatype, and its value is five.
+```ruby 5``` - this is a integer datatype, and its value is five.
 `12` - this is an integer datatype, and its value is twelve.
 `2000` - this is an integer datatype, and its value is two thousand.
 `3.2` - this is a float datatype, and its value is three point two.
@@ -97,7 +97,7 @@ federer = {
 You can see that here we have contained in one structure all the things that we need to cover, but the information about what these values refer to is not lost. Now we can access elements of this variable federer by referencing the key.
 `federer[:age]` gives us back the integer 36, for example.
 
-You can think of all that we have seen so far as falling into two levels. The elementary datatypes are the building blocks of everything else that happens. They are string, float, integer, boolean, and nil. These are the basic structures: the elements that we can use to build our world.
+You can think of all that we have seen so far as falling into two levels. The elementary datatypes are the building blocks of everything else that happens. They are _string_, _float_, _integer_, _boolean_, and _nil_. These are the basic structures: the elements that we can use to build our world.
 And then we also have two useful structures that are inbuilt into Ruby to help us combine these lower level elements: arrays and hashes.
 In the same way as we are all made from the same elements, but just in different combinations, all code ever is is those basic datatypes being pushed around all over the place in larger structures.
 
@@ -108,7 +108,7 @@ Most of the time we will want to make use of a variable to help us in our quest.
 Variables are merely a placeholder for some bit of data. They are (to us) a recognisable word that we can use as shorthand for whatever bit of data we feel is useful. (To the computer they just refer to a place in memory, but you don’t need to worry about that much.)
 
 If we write 
-`[1,2,3].each do |item|..`
+`ruby [1,2,3].each do |item|..`
 And so on, it’s not too onerous to keep writing `[1,2,3]` wherever we need it.
 But what if the array has 100 items? 1000? 
 Then it becomes a problem. So if we want a place to store this thing we have created, we use a word - let’s say huge_array - and store our data in it. Now that word just represents that bit of data. An array with three things. An array with 100. A big weird hash. An integer of some value. A string of some value. And so on.
