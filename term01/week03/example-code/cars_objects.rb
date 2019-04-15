@@ -3,7 +3,7 @@ require 'pry'
 class Car
     attr_reader(:wheels, :cylinders, :make, :aircon_running)
     # attr_writer(:colour)
-    attr_accessor(:colour, :aircon, :top_speed)
+    attr_accessor(:colour, :aircon, :top_speed, :current_speed)
     def initialize(colour, cylinders, aircon, make, top_speed)
         @colour = colour
         @cylinders = cylinders
@@ -16,7 +16,10 @@ class Car
     end
 
     def set_current_speed(speed)
+        puts self.current_speed
+        # @current_speed
         @current_speed = speed
+        puts self.current_speed
     end
 
     def toggle_aircon()

@@ -1,18 +1,21 @@
-<!-- ## Things to go back to
+## Things to go back to
 - Combining booleans
-- Gems
+
+<!-- ## Tomorrow
+- Git
 - Pseudocode
+- Gems
 - Case statements
 - Ranges
 
-## Other future topics
-- Git
+## Week 4
+- Class methods
+- Inheritance
 - Testing
 - Blocks
-- Inheritance
-- Modules -->
+- Modules
 
-<!-- ## Other
+## Other
 - Next test
 - Kahoots -->
 
