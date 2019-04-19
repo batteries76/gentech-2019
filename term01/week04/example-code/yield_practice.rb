@@ -1,6 +1,6 @@
 require 'yield_source'
 
-what_the_dooce!() do |item|
+what_the() do |item|
     puts item
 end
 
@@ -33,9 +33,12 @@ end
 
 yield_obj.now_what(["a","b", "c"]) do |item|
     puts item
+    puts("hdjgjhdgjdhgdjhgd")
+    # return 100
 end
 
 yield_obj.str_to_what("This is a big sentence that has lots of words in") do |hash|
+    puts("ljljljljljljljljljljjljlljljljljljljljljl")
     print hash
     puts
 end

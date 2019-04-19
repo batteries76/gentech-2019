@@ -3,6 +3,7 @@
 ## Object Oriented Programming (OOP)
 
 ### Lesson Material
+- Inheritance
 
 ### Classes & Objects Review
 
@@ -119,7 +120,7 @@ end
 Is our code very DRY?
 No, we have repeated ourselves a bunch right. So we should clean up our code someway. We lucky for us Ruby has a feature for classes called inheritance.
 
-### Inheritance
+## Inheritance
 
 What things did our `Lion` class have in common with our `Giraffe` class?
 Pretty much everything right. The only thing that really changed was the noise the two different animals made. So what if we had a way to define all these common features of both classes somewhere else. Then when we define our Lion or Giraffe class we simply state that we want access to those features. Well this is the basis of something know as inheritance.

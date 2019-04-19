@@ -5,34 +5,36 @@
 # Your job is to fix it.
 require 'yield_source'
 
-# This will break. Make it work. You need to find a string that says "Found me.."
-what_the_dooce!()
+# 1. This will break. Make it work. You need to find the string that says "Found me.."
+what_the()
 
-# Build an object. We will use this object by running its instance methods
+# Build a YieldSource instance/object. We will use this object by running its instance methods
 yield_obj = YieldSource.new()
 
-# Here you have the starter code.. but need to investigate what's going on. 
+# From here on the game is to try to understand what the function is doing behind the scenes. Just putsing out the block argument(s) is not enough. Have a play with the method arguments and see if you can work out what is happening.
+
+# 2. Here you have the starter code.. but need to investigate what's going on. 
 # yield_obj.what_is_it?() do |thing|
 # end
 
-# This takes a block, but also two ordinary number arguments in the instance method. See if you can use the block to work out what happens before the yield.
+# 3. This takes a block, but also two ordinary number arguments in the instance method. See if you can use the block to work out what happens before the yield.
 # yield_obj.yielder()
 # end
 
-# This one takes a string (and a block). What is happening behind the scenes?
+# 4. This one takes a string (and a block). What is happening behind the scenes?
 # yield_obj.how_many()
 # end 
 
-# This one takes a string again (and a block as usual).  
+# 5. This one takes a string again (and a block as usual).  
 # yield_obj.what_is_it_this_time()
 # end
 
-# Yep, a string and a block again. But something else is going on here. See if you can discover it. (You'll need to do a good job investigating the pipes.)
+# 6. Yep, a string and a block again. But something else is going on here. See if you can discover it. (You'll need to do a good job investigating the pipes.)
 # yield_obj.argsss()
 # end
 
-# This one takes an array. What it is up to?
+# 7. This one takes an array. What it is up to?
 # yield_obj.now_what()
 
-# This one takes a sentence and does summat
+# 8. This one takes a sentence and does summat
 # yield_obj.str_to_what()
