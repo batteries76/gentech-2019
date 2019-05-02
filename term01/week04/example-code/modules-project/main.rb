@@ -1,6 +1,16 @@
 require_relative './animals.rb'
 require_relative './constants.rb'
 require_relative './methods.rb'
+require 'catpix'
+
+Catpix::print_image "kuhn-copy.jpg",
+  :limit_x => 1.0,
+  :limit_y => 0,
+  :center_x => true,
+  :center_y => true,
+  :bg => "white",
+  :bg_fill => true,
+  :resolution => "high"
 
 menu = MyMathsConstants::MENU
 

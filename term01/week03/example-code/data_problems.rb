@@ -34,7 +34,7 @@ class Thing
             print("This is attr_s in change_anything loop: #{attr_s}")
             puts
             if(attr_s = attribute)
-                puts("In HERE")
+                puts6("In HERE")
                 self.(attr_s.to_sym) = value
             end
         end

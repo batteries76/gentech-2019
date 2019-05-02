@@ -1,16 +1,14 @@
-# Day 01 — OOP (Object Oriented Programming)
+# Week 3, Day 3 — OOP (Object Oriented Programming)
 ## Outcomes
 Students to have a basic understanding OOP
 
 ## On successful completion of this unit students will be able to:
 Construct basic class object based off a real world object, understand OOP use and purpose in development.
 
-## Things we need to go back to
-- Combining booleans
-- git
+<!-- ## Things we need to go back to
 - more methods for strings and arrays
 - particularly pushing and popping, and shifting
-- map, select, etc
+- map, select, etc -->
 
 ## Review
 - Hashes

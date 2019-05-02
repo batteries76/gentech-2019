@@ -1,10 +1,18 @@
 # Week 4, Day 3
 
 ## Lesson Material
+- Markdown
+- Trello
+- The rubric
 - Git and GitHub (pushing to the cloud)
 - Testing
 - Test review
 - Modules
+
+## Markdown and Trello
+- Markdown is very useful for writing READMEs,
+- and Trello is great for keeping track of your project.
+- Both are learned easily by doing.
 
 ### Git and GitHub
 - We installed (tortuously) the SSH (secure shell) key on our GitHub accounts.
@@ -62,3 +70,10 @@ end
 
 test_input_div()
 ```
+
+### Modules and importing code
+- Modules are a useful way to organise our code.
+- We can store constants or methods in modules.
+- There are several benefits to well designed modules, but we talked mostly about their use in namespacing (preventing naming clashes), and in helping to organise our code.
+- We can also define our classes in another file and require them in.
+- We used `require_relative` for this purpose.

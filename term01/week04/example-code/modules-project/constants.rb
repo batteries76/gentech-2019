@@ -4,4 +4,10 @@ module MyMathsConstants
 
     MENU = "1.choose "
 
+    class Tapir
+        def initialize(name)
+            @name = name
+        end
+    end
+
 end

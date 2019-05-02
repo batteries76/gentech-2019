@@ -1,5 +1,3 @@
-
-
 cocktail = {
     drink_type: 'cocktail',
     on_order: 3,
@@ -21,13 +19,16 @@ beer = {
     cost_to_make: 3
 }
 
-drinks_available = [water, beer, cocktail]
+wine = {
+
+}
+
+drinks_available = [water, beer, cocktail, wine]
 
 # puts("1. #{beer[:drink_type]} costs $#{beer[:sell_price]}")
+
 drinks_available.each do |drink_hash|
     puts("1. #{drink_hash[:drink_type]} is $#{drink_hash[:sell_price]}")
 end
 
-def print_menu(drinks)
-end
 

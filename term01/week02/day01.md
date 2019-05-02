@@ -6,7 +6,7 @@ Students to know about datetime, date & time data type / object
 - Datatypes (string, numbers, booleans)
 - if/else
 - Arrays
-- Loops (focused on while and .each)
+- Loops (while)
 <!-- ## Extra
 - Pseudocode
 - Case statements? Ternary operators? -->

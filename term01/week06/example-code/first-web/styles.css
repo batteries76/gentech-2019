@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: forestgreen;
+}
+
+h1 {
+    background-color: yellowgreen;
+    padding-left: 30%;
+    /* margin-left: 250px; */
+}
+
+h2 {
+    background-color: olive;
+}
+
+footer {
+    height: 150px;
+    background-color: aquamarine;
+    padding: 105px;
+    margin: 50px;
+}
+
+#first-main {
+    background-color: navy;
+}
+
+.first-list {
+    background-color: darkcyan;
+}
+
+.first-span {
+    background-color: red;
+}
+
+.second-span {
+    background-color: purple;
+}
