@@ -101,6 +101,8 @@ body
     - block: takes up the whole width of the page.
     - in-line: takes up only the width of the content (and cannot set width and height, amongst other things)
     - in-line block: is like in-line in terms of content, but can be adjusted like block.
+
+[This StackO article explains this well](https://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
 - (I glossed over this second point in class when I talked of only two types of element. Both of the points above are simplified and summarised to form the basis of understanding CSS from a top level. It's more complex, but we can see the kinks as they arise.)
 - We looked at a couple of basic CSS attributes: 
     - *background-color*: the colour of of the background to the element
