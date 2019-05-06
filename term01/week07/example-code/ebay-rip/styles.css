@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: blue; */
+}
+
+.mothers-day-special {
+    background-color: pink;
+    height: 30px;
+}
+
+.user-header {
+    height: 30px;
+    background-color: yellowgreen;
+}
+
+.header-search {
+    height: 85px;
+    background-color: rgb(216, 101, 111);
+}
+
+.header-categories {
+    height: 30px;
+    background-color: blue;
+}
+
+.header-banner {
+    height: 320px;
+    background-color: red;
+}
+
+.nespresso-wrapper {
+    height: 180px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nespresso-wrapper aside {
+    height: 120px;
+    background-color: black;
+    width: 80%;
+}
+
+.help-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 40px;
+    right: 0px;
+    bottom: 90px;
+    background-color: green;
+}
+
+.electronics-wrap h1 {
+    font-size: 90px;
+}
+
+.help-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    background-color: brown;
+}
+
+.help-question-mark, .help-query {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    background-color: antiquewhite;
+}
+
+.electronics-wrap {
+    padding: 0% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 150px;
+    max-height: auto;
+    background-color: lightgrey;
+    margin-bottom: 100px;
+}
+
+.electronics-element {
+    background-color: blue;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    margin: 5px;
+    flex-basis: 100px;
+    flex-grow: 7;
+}

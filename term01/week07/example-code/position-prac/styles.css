@@ -1,0 +1,59 @@
+.first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: brown;
+}
+
+.inner {
+    background-color: aqua;
+    height: 85px;
+    width: 85px;
+}
+
+.move1 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.move2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.second {
+    background-color: black;
+    height: 85px;
+    width: 85px;
+}
+
+.third {
+    background-color: blue;
+    height: 85px;
+    width: 85px;
+}
+
+.fourth {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+}
+
+.fifth {
+    background-color: yellow;
+    height: 80px;
+    width: 80px;
+}
+
+.sixth {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+}
