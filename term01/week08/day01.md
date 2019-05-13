@@ -1,0 +1,16 @@
+- position *
+- design stuff ~
+- grid *
+- grid areas etc *
+- media queries *
+- ems and rems *
+- images 
+- svgs
+- animations
+- advanced css (variables)
+- scss
+- more deployment 
+- figma ~
+- browsers and polyfills
+- frameworks
+- pseudo-selectors

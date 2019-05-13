@@ -2,7 +2,6 @@
 
 ## CSS
 ### Position
-
 - We talked about the default setting for CSS elements being `static`. In a way this means that no position has been set. 
 - The default will be for the elements to move up the page into the top left corner, but keeping in mind the `block`, `inline` and `inline-block` aspects of each element.
 - Now we are looking at ways to move the elements around away from this default or standard position (`static`).
