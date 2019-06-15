@@ -1,0 +1,6 @@
+<h1> POKEMON </h1>
+
+<% @pokemon.each do |pokemon| %>
+    <h2><%= pokemon[:name] %></h2>
+    <img src=<%= pokemon[:url] %> >
+<% end %>

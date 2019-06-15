@@ -1,0 +1,94 @@
+:root {
+    --my-fav-colour: #7F9183;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: aquamarine; */
+}
+
+#animated {
+    font-size: 26px;
+    color: black;
+    animation: elephant 8s;
+}
+
+@keyframes elephant {
+    0% {
+        background-color: blue;
+        color: white;
+    }
+    75% {
+        background-color: red;
+    }
+    100% {
+        background-color: var(--my-fav-colour);
+        color: black;
+        /* margin-left: 50px; */
+    }
+}
+
+.box {
+    background-color: palevioletred;
+    height: 650px;
+    width: 650px;
+}
+
+.more-words {
+    padding: 30px;
+    font-size: 20px;
+    background-color: aquamarine;
+    transition: background-color 6s;
+}
+
+.more-words:hover {
+    font-size: 60px;
+    background-color: blueviolet;
+    transition: 3s;
+}
+
+.wrapper-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    height: 300px;
+    width: 1400px;
+    background-color: blue;   
+}
+
+.top-div-item {
+    padding: 20px;
+    background-color: indianred;
+    height: 180px;
+    width: 180px;
+}
+
+.three {
+    background-color: palegreen;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottom-div-item {
+    background-color: plum;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+/* .wrapper-div > div {
+    background-color: blueviolet;
+} */
+
+.four + .five {
+    background-color: greenyellow;
+}
+
+.cee ~ .dee {
+background-color: darkorange;
+}

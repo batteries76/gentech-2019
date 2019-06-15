@@ -1,0 +1,70 @@
+:root {
+  --my-fav-background-colour: #7F9183;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+}
+
+p {
+  font-size: 50px;
+  animation-duration: 6s, 12s;
+  animation-name: slidein, colouroo;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from  {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes colouroo {
+  from  {
+    background-color: purple;
+  }
+  10% {
+    font-size: 6px;
+  }
+  35% {
+    font-size: 60px;
+  }
+  75% {
+    font-size: 25px;
+    margin-left: 25%;
+    width: 150%;
+  }
+  to {
+    background-color: var(--my-fav-background-colour);
+  }
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  transition: background-color 3s;
+  /* transition: width 5s; */
+  transition: height 5s;
+}
+
+.box:hover {
+  height: 50px;
+  /* width: 400px; */
+  background-color: blue;
+  transition: background-color 12s;
+  /* transition: width 5s; */
+  transition: height 5s;
+}
