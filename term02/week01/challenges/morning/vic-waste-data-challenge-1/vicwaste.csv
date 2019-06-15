@@ -1,0 +1,20 @@
+OBJECTID,FEATURETYPE,CLASS,FID,NAME,LANDFILL,REPROCESSING,TRANSFERSTATION,OPERATOR,OWNER,ADDRESS,SUBURB,STATE,SPATIALCONFIDENCE,REVISED,COMMENT,LATITUDE,LONGITUDE
+1915,Waste Management Facility,Transfer Station,2443,Strathfieldsaye Waste Transfer Station,,,Operational,,Greater Bendigo City Council,Strathfieldsaye Road,Strathfieldsaye,Victoria,5,20111208,,-36.807721,144.362969
+1917,Waste Management Facility,Landfill,2464,Wandella Landfill,Operational,,,,Gannawarra Shire Council,Denyer Road,Wandella,Victoria,3,20111208,Asbestos EPA Victoria,-35.764396,143.776639
+1918,Waste Management Facility,Transfer Station,2470,Wesburn Recovery and Waste Transfer Station,,,Operational,,Yarra Ranges Shire Council,Old Warburton Road,Wesburn,Victoria,5,20111208,,-37.7748359999999,145.649282
+1919,Waste Management Facility,Transfer Station,2471,Whitefield Waste Transfer Station,,,Operational,,Wangaratta Rural City Council,5865 Mansfield-Whitfield Road,Whitefield,Victoria,4,20111208,,-36.7785049999999,146.392972
+1920,Waste Management Facility,Transfer Station,2479,Yarram Waste Transfer Station,,,Operational,,Wellington Shire Council,Hyland Way,Yarram,Victoria,5,20111208,,-38.5412969999999,146.708143
+1921,Waste Management Facility,Landfill,2478,Wycheproof Landfill,Operational,,,,Buloke Shire Council,Mackies Road,Wycheproof,Victoria,4,20111208,,-36.064426,143.256966
+1923,Waste Management Facility,Landfill,2430,Piangil Landfill,Operational,,,,Swan Hill Rural City Council,Haywood Road,Piangil,Victoria,5,20111208,,-35.075843,143.31075
+1924,Waste Management Facility,Landfill,2414,Nandaly Landfill,Operational,,,,Buloke Shire Council,Nandlay-Nyarrin Road,Nandaly,Victoria,4,20111208,,-35.32203,142.697336
+1927,Waste Management Facility,Landfill,2344,Chinkapook Landfill,Operational,,,,Swan Hill Rural City Council,Nyah West Road,Chinkapool,Victoria,3,20111208,,-35.188724,142.952203
+1930,Waste Management Facility,Landfill,2333,Boundary Bend Landfill,Operational,,,,Swan Hill Rural City Council,Kooloonong Road,Boundary Bend,Victoria,2,20111208,,-34.752068,143.141746
+1969,Waste Management Facility,Landfill,2390,Lah Landfill,Operational,,,,Yarriambiack Shire Council,Henty Highway,Lah,Victoria,4,20111208,,-36.137823,142.414784
+1986,Waste Management Facility,Transfer Station,2315,Balmoral Waste Transfer Station,,,Operational,,Shoalhaven City Council,55 Hamilton Natimuk Road,Balmoral,Victoria,5,20111208,,-37.2420989999999,141.840856
+1987,Waste Management Facility,Transfer Station,2334,Branxholme Waste Transfer Station,,,Operational,,Shoalhaven City Council,114 Branxholme Byaduk Road,Branxholme,Victoria,5,20111208,,-37.864182,141.811116
+1988,Waste Management Facility,Transfer Station,2356,Dunkeld Waste Transfer Station,,,Operational,,Shoalhaven City Council,7 Bellicourt Road,Dunkeld,Victoria,5,20111208,,-37.6695539999999,142.34642
+1989,Waste Management Facility,Transfer Station,2368,Glenthompson Waste Transfer Station,,,Operational,,Shoalhaven City Council,Glenthompson Maroona Road,Glenthompson,Victoria,5,20111208,,-37.623724,142.551352
+1990,Waste Management Facility,Transfer Station,2429,Penshurst Waste Transfer Station,,,Operational,,Shoalhaven City Council,5408 Hamilton Highway,Penshurst,Victoria,5,20111208,,-37.856321,142.319598
+2097,Waste Management Facility,Landfill,2916,Hi-Quality Sunbury Quarry & Landfill,Operational,,,,Hi-Quality Group,600 Sunbury Road,Bulla,Victoria,4,20131129,,-37.6062705149999,144.784074674
+2126,Waste Management Facility,Reprocessing,3083,SteriHealth Corporate Headquarters  Victorian Customer Centre & Hammer Mill Facility,<Null>,Operational,<Null>,Sterihealth,SteriHealth Limited,34-36 Cahill Street,Dandenong South,Victoria,5,20160408, Clinical Waste Facility. (T) ,-38.026489258,145.196105957
+2129,Waste Management Facility,Reprocessing,3002,Ace Waste,<Null>,Operational,<Null>,Ace Waste,Ace Waste Pty Ltd,64-68 Ordish Road,Dandenong  South,Victoria,5,20160408, Clinical Waste Facility. (T) ,-38.020629883,145.192504883
