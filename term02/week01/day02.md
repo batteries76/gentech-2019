@@ -192,7 +192,7 @@ end
 - The pure ruby commands are wrapped in `<% %>`. These are to be evaluated as ruby logic. These are not displayed to the browser, but they have an effect on what is or isn't displayed, or on how many elements are displayed.
 - The elements that are to be evaluated and displayed are wrapped in `<%= %>` (note the extra `=`). These are the elements that we are showing on the front end. 
 - We need to take care of the variables and the logic, and Sinatra works out how to send the HTML to the browser.
-- As you can see, Sinatra takes care of many of the elements that we were responsibloe for when using WEBrick.
+- As you can see, Sinatra takes care of many of the elements that we were responsible for when using WEBrick.
 
 ## MVC and separation of concerns
 - Here we also see the start of the Model View Controller paradigm of making applications. 
