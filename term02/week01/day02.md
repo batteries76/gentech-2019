@@ -1,208 +1,226 @@
 # Day 02 — The Web
 
 ## Outcomes
-- Understand the basics of Sinatra
-- Understand some of what Sinatra relies on to function
-- Be able to make a simple Sinatra app
+- Understand the basic structures of the web
+- Undertand how ruby fits into that picture
+- Be able to make a simple server and router
 - Be able to render HTML conditionally via routes
-- Understand and be able to use an ERb
 
-## Sinatra
-- On day one we saw how we can make a simple server with WEBrick, and then add routes to that server.
-- We also looked at Sinatra briefly, and saw that it works in a similar way, but helps by sorting out the low level stuff for us behind the scenes, so that we can concentrate on the parts of the app that are more important to us.
-- Sinatra configures and runs a server for us (which can be WEBrick, or Thin, or Puma). 
-- Sinatra is known as a *_DSL_*, which is slightly unecessary jargon. It stands for 'Domain Specific Language', which is a specially designed superset of a language used for a specific set of circumstances.
-- Here the most basic function we are using Sinatra for is to make a server that can listen and respond, and configuring some routes to respond in different ways.
-- Here is an example Sinatra app:
+## The Internet (as it relates to what we need now)
+- We feel comfortable with browsers. But they are much more than what we realise. 
+- The browser is an instrument to communicate with a server. 
+- A server is a computer running a certain type of computer program. For the computer to be a server the program much be listening to a port for internet traffic.
+- So a browser is a seeker of a server, and a server listens for incoming traffic from the internet - often from a browser.
+- The browser (also known as a 'client') knows how to create an HTTP request.
+- HTTP is a protocol. A protocol is a prearranged format for data (information). Without some form of protocol, all information would be mess. We would have to examine every part of the message, and use intuition and guesswork to discern the meaning.
+- With a protocol, you predefine the structure of the information so that any program (or human) who understands the protocol can parse (understand and make sense of) the content of the message.
+- On the internet, browsers and servers can talk to each other via the HTTP protocol. Browsers are information seekers, and servers are like information handlers. The protocol helps this information be transferred efficiently.
+- For the first day we were dealing with only one form of communication from the browser to the servers of the internet - a GET request, created when you type something into the URL bar of a browser. 
+- This URL (or URI) contains some information: 
+* Part of the information (URI) relates to the protocol (the *_scheme_*). 
+* Another part of the URI tells the various internet nodes where this information is headed to find the correct server (the *_domain_*, or *_authority_*).
+* The next part tells the server which bit of information that the server holds should be sent back (the *_path_*).
+* The next part is further information for the server if required (the *_query string_*).
+* and the last part can be used to send the browser to a particular part of the webpage (the *_fragment_*).
+- You parsed a URI so hopefully have a good understanding of these sections.
 
-```ruby
-require 'sinatra'
+## Protocols (and data formats)
+- In the past we looked at a CSV - a file that is just a text file, but that is known as a CSV (*C*omma *S*eparated *V*alues).
+- That we call particular text files CSVs means that the information inside them is in a certain format, that format being a set of comma separated headers, and then followed by the data itself.
+- The data is comma separated, and each entry is ended by a newline.
+- The main thing to understand about this is that it is an arbitrary format. We could separate values using a `^`, or a `$`, or `fred`. We could use `*` instead of a newline. The important aspect is not the particular _'delimiter'_ (eg, `,`), but rather that the person making the file, and the person trying to read from the file both understand the format.
+- That way it can be _'parsed'_, which means to take the information that is in one format, and convert it into something that is more useful. 
+- In our case, this means taking the information in the text file (CSV), which is a large string, and converting it into ruby - a language that we know, and that we can use to manipulate and send the data. 
+- In many ways this is analogous to a database. We can store information in this file, which is permanent, and then retrieve the data from the file when we need to manipulate, analyse, and display it.
+- To this point, parsing has involved retrieving the whole file. But we couold imagine being able to have more control over this file. We could add an 'entry' (a new line of data), or delete one, or update one.
+- We could also search for entries that meet particular conditions. In the example we used in class, we talked about how we could retreive only those teams who had won 4 or more premierships, for example.
+- This idea of parsing is useful when talking about a URI (or URL) as well. 
+- A URI has a very specific and set structure. 
+- Because it has that structure, we can have confidence that we can understand what the various parts of the URI mean, and as a result we are able to efficiently 'parse' the URI to extract the values represented by those parts, and then act accordingly.
+- Again, this same idea can be used when talking about a protocol - the protocol most involved in web programming being HTTP.
+- A protocol is merely a predefined agreement to arrange data in a particular format. 
+- Once people agree on a protocol, then information can be transferred efficiently between the sender and receiver.
+- The format of the protocol, as with the CSV, is largely (but not totally) arbitrary. It's not overly important how it comes about. Just that it exists, and that the entities using the protocol (web programmers and the computers they run) understand which protocol to use, and what format it takes.
 
-get '/' do
-    erb :index
-end
-
-get '/this-app-works' do
-    "<h1> Big Heading something </h1>"
-end
-
-get '/elephant' do
-    erb(:elephant)
-end
-
-get '/pokemon' do 
-    @pokemon = [
-        {
-          name:"bulbasaur",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        },
-        {
-          name:"ivysaur",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-        },
-        {
-          name:"venusaur",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
-        },
-        {
-          name:"charmander",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        },
-        {
-          name:"charmeleon",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
-        }
-    ]
-    erb(:pokemon)
-end
-
-get '/frank-says' do
-    "Put this in your pipe & smoke it!"
-end
-
-post '/frank-says' do 
-    "Something different from the get request"
-end
-
-get '/teams' do
-    @data = [
-        {
-            id: 1,
-            team: 'Collingwood',
-            city: 'Melbourne',
-            premierships: 15
-        },
-        {
-            id: 2,
-            team: 'West Coast',
-            city: 'Perth',
-            premierships: 4
-        }
-    ]
-    erb(:teams)
-end
-```
-
-- Here is much the same code, but with explanatory comments embedded:
+## Servers (and browsers)
+- As discussed, a web server is a computer running a program to help it to listen to the internet.
+- In class we created a server using WEBrick. 
+- WEBrick turns our computer into a server, meaning that it opens a port on our computer (an entry point for the outside world), and then waits for signals coming in to that port.
+- This program is running but idle while it awaits these signals. 
+- A browser is a sophisticated piece of software that has the capacity to send HTTP requests into the internet.
+- When you type a URI into the broswer input bar, the browser parses this and packages the information into an HTTP request, and then sends this request out into the world via the internet, searching for the appropriate server.
+- The server is configured to listen for this particular type of request.
+- When the server receives this request, its primary job is to send a response. 
+- The response is also defined by the HTTP protocol.
+- Here is an example of the code required for a very basic server:
 
 ```ruby
-# Same deal here. Requiring in heaps of code. This time the code will bring with it other gems that will run behind the scenes. There was magic with WEBrick, but it was low level. This time there is much more magic.
-# We are also seeing the start of the separation of concerns here, with most of our views not being mixed in with the code, but syphoned off into files in their own folder (/views). This is the V (views - the visible and presentation part of the application) in MVC.
-require 'sinatra'
+require 'webrick'
 
-# This next gem will help by reloading your server code without having to stop and restart the server. 
-# > gem install sinatra-reloader (just to be confusing).
-# Sometimes it will be best to stop and restart the server manually, particularly if the changes are not being reflected - 'sinatra/reloader' is not a perfect solution to that problem.
-require 'sinatra/reloader'
+root = File.expand_path('./')
+server = WEBrick::HTTPServer.new({:Port => 8000, :DocumentRoot => root})
 
-# From here we are setting up out routes. The routes can take (almost) any string we like (keep in mind what you know about URI's and delimiters). Sinatra takes care of setting up the response object for us, and doing all the work of attaching things. Much more of the process is performed behind the scenes here. 
-get '/' do
-    # In this instance we are using Sinatra's erb method to send back a particular embedded ruby file, in this case 'index.erb'. This is convention for the '/', but we could call the file whatever we like.
-    erb :index
+trap('INT') do 
+    server.shutdown()
 end
 
-# This example shows that Sinatra will attempt to render the last element in the block by default. 
-get '/this-app-works' do
-    "<h1> Big Heading something </h1>"
-    # If the following was the last line of the block it would still render it. In this example Sinatra concatenates the stings. An array of numbers errors out.
-    # arr = ["a","b","c"]
-end
-
-# In general, the name of the file to be served is the same as that of the path. This is convention, and often the framework will work on this basis by default (that is, if no file is given then it will look for a file of the same name as the path in /views to render). Sinatra asks that we specify a file though. I could have rendered index.erb, or pokemon.erb, but here I am following convention and rendering elephant.erb.
-get '/elephant' do
-    erb(:elephant)
-end
-
-# This one shows how we can access instance variables in our ERb files. ERbs are HTML files with embedded ruby. The browser *cannot* read ruby, so they have to be processed before they are sent from the server back to the browser. The erb method does this for us. It looks at the value of the instance method, and then processes the HTML that is produced as a result. The pure HTML is then sent out in response (attached as the response message/body).
-get '/pokemon' do 
-    # Here we are hardcoding the data into the route. This will be replaced by calls to external elements in the future.
-    @pokemon = [
-        {
-          name:"bulbasaur",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        },
-        {
-          name:"ivysaur",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-        },
-        {
-          name:"venusaur",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
-        },
-        {
-          name:"charmander",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        },
-        {
-          name:"charmeleon",
-          url:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
-        }
-    ]
-    erb(:pokemon)
-end
-
-# This route is detritus from early on, but is useful now to show the difference in the HTTP verbs (GET, POST, PATCH, etc). The contrast is made with the post method that follows this method.
-get '/frank-says' do
-    "Put this in your pipe & smoke it!"
-end
-
-# We haven't officially seen how to make a POST request yet, but the key thing here is that it is a totally separate request from the get request with the same path name. It's vital to understand that although the path is the same, the code is separate, and does something different in our application.
-post '/frank-says' do 
-    "Something different from the get request"
-end
-
-# Here is some more hardcoded data that is being served back to the browser. In the future we will not hardcode this data, and instead get it from some sort of storage - a file, a CSV file, a relational database (one that has tables, eg. SQLite, Postgres), or a document/NoSQL database (one that stores objects that look more like hashes, eg. Mongo).
-get '/teams' do
-    @data = [
-        {
-            id: 1,
-            team: 'Collingwood',
-            city: 'Melbourne',
-            premierships: 15
-        },
-        {
-            id: 2,
-            team: 'West Coast',
-            city: 'Perth',
-            premierships: 4
-        }
-    ]
-    erb(:teams)
-end
+server.start()
 ```
 
-## ERb
-- ERb is Embedded ruby. It comes by default with Sinatra.
-- Sinatra can serve plain HTML files too. Embeeded ruby is an add on to the HTML we are familiar with.
-- Embedded ruby gives us the power to run ruby code within our HTML.
-- This gives us the ability to have our HTML be written so that it reacts to the variables we are creating in our app on the back end.
-- Browsers do not understand ruby - they only read HTML and CSS (and JavaScript).
-- As such, we need something to create the pure HTML from our ERb files. The `erb` method takes the instance variables we create, and produces HTML that results from our ERbs. 
-- Here is an example ERb file:
+- This server is very simple. It sets up a port to listen at (8000), and then waits for traffic. It only sends back a simple response to the browser say that the message was received.
+- If we make an `index.html` file in the root, it will serve that file.
+- We can extend this file to react to different URL (URI) paths by using the AbstractServlet class.
+- By making changes to that class, we are able to change what the content of the response is. 
+- This is the main point of the server: to listen for requests, and then respond appropriately. 
+- Here is our file with the Routes class to help with the different requests:
 
-```html
-<h1> POKEMON </h1>
+```ruby
+require 'webrick'
+require_relative 'csv_parser'
+require 'csv'
 
-<% @pokemon.each do |pokemon| %>
-    <h2><%= pokemon[:name] %></h2>
-    <img src=<%= pokemon[:url] %> >
-<% end %>
+class Routes < WEBrick::HTTPServlet::AbstractServlet
+
+    def do_GET(request, response)
+
+        puts "REQUEST PATH"
+        puts request.path
+
+        response.status = 200
+
+        case request.path
+
+        when '/'
+
+            response.body = "Hello"
+        
+        when '/user'
+
+            response.body = get_html('user.html')
+
+        when '/another-path'
+
+            puts "IN ANOTHER-PATH ROUTE"
+            query_str = request.query 
+            print query_str
+            puts
+
+            response.body = query_str.to_s
+
+        when '/teams'
+
+            csv_text = File.read('data.csv')
+            csv = CSV.parse(csv_text, :headers => true)
+
+            response.body = csv.to_s
+
+        when '/dunno' 
+
+            response.body = get_html('index.html')
+
+        when '/user-data'
+
+            user = {
+                username: 'your_name',
+                email: 'youremail@address.com',
+                address: 'your_address',
+                phone: 'your_phone_no'
+            }
+
+            response.body = user.to_s
+
+        when '/city'
+
+            puts "QUERY"
+            puts request.query
+
+            selected_city = request.query['city']
+            puts "CITY"
+            puts selected_city 
+
+            csv_file = CSVParser::CsvParser.new("./data.csv")
+            parsed_csv_data = csv_file.parsed_data
+
+            selected_teams = []
+
+            parsed_csv_data.each do |team|
+                if(team[:city] == selected_city)
+                    selected_teams << team
+                end
+            end
+
+            response.body = selected_teams.to_s
+        
+        when '/data'
+ 
+            response['Content-Type'] = 'text/html'
+
+            data = [
+                {
+                    id: 1,
+                    team: 'Collingwood',
+                    city: 'Melbourne',
+                    premierships: 15
+                },
+                {
+                    id: 2,
+                    team: 'West Coast',
+                    city: 'Perth',
+                    premierships: 4
+                }
+            ]
+
+            string_data = ""
+
+            data.each do |team|
+                team_id = "<h2> #{team[:id]} </h2>"
+                team_name = "<h1> #{team[:team]} </h1>"
+
+                string_data += team_id
+                string_data += team_name
+            end
+
+            puts string_data
+
+            response.body = string_data
+
+        else 
+
+            response.status = 404
+            response.body = "NOT A VALID ROUTE"
+
+        end
+
+        if (request.path == '/welcome')
+            response.body = "Hi, welcome to the site"
+        end
+        
+    end
+
+    private 
+
+    def get_html(file) 
+        path = File.join(__dir__(), 'views', file)   
+        html = File.open(path).read()
+        return html
+    end
+end
+
+server = WEBrick::HTTPServer.new(Port: 6600)
+
+trap 'INT' do 
+    server.shutdown 
+end
+
+server.mount '/', Routes
+server.start
 ```
-
-- The pure ruby commands are wrapped in `<% %>`. These are to be evaluated as ruby logic. These are not displayed to the browser, but they have an effect on what is or isn't displayed, or on how many elements are displayed.
-- The elements that are to be evaluated and displayed are wrapped in `<%= %>` (note the extra `=`). These are the elements that we are showing on the front end. 
-- We need to take care of the variables and the logic, and Sinatra works out how to send the HTML to the browser.
-- As you can see, Sinatra takes care of many of the elements that we were responsible for when using WEBrick.
-
-## MVC and separation of concerns
-- Here we also see the start of the Model View Controller paradigm of making applications. 
-- It is a useful way to organise your application so that it is easier to understand, and more flexible.
-- It was not until Sinatra forces the wiews out into their own folder (through an error message) that we see this construct enforced in any way.
-- Sinatra is light touch when it comes to enforcing MVC conventions. Rails will have much more to say on the issue.
-- We will discuss this much more in the coming week.
-
-## Other HTTP methods
-- To start with we have been looking only at HTTP GET requests.
-- This is just one type of HTTP request.
-- We briefly discussed that there are other types of request, including POST, PATCH, and DELETE.
-- We will cover this in more depth this coming week. 
+- It's an unwieldy file now. There is a lot going on, and there will be ways that we can make things clearer in the future.
+- The key aspect of this file is that the server is started to listen for requests (down the bottom of the file). Our routes class will change what the `response.body` is depending on the route of the incoming URI. We also send the response back with a status (200 - success, or 404 - not found).
+- That's essentially all that happens in this file. For all its complexity, the main job is to react to the route sent by the browser in the request, and then send something back. 
+- In this particular file, because it is not a coherent app, we are just picking some fairly random path names, and sending back some fairly random data. The key point is that it's under our control - we set the paths, and we also set the data that is sent back from the paths.
+- Sometimes this data was a simple string (and HTML is just a string).
+- Sometimes it was some very simple HTML. 
+- Sometimes it involved another step to parse some data from a file (CSV) and then send back that data. 
+- In some of these cases we used more information than just the path to send back the data. We were able to send back parts of the data corresponding to the information requested by the _'query string'_ section of the URI. 
+- It's up to the browser to render the data it obtains from the server. 
