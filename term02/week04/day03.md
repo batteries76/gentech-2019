@@ -6,7 +6,7 @@ I’ve probably made a few too many changes to the code at the start to peel it 
 
 There was also the added confusion of several syntaxes when calling on variables, which, depending on your view, is either some nice Rails magic, or some strange arbitrary decisions. But so be it. You need to get used to it, and I didn’t want grumbling about Rails itself to be a big part of all of this. 
 
-_*Partials and Variables*_
+### *Partials and Variables*
 
 To the learning. 
 
@@ -31,7 +31,7 @@ In reality you don’t actually want to go down this path too often without a cl
 
 Then again, if that’s what you want (passing through those variables), go for your life. Partials make your code cleaner, and sometimes you can’t avoid customising them. Just wanted to put that thought out there.
 
-*`form_with`*
+### *`form_with`*
 
 This gear with the `form_with` and the model is more Rails magic. It’s one way Rails provides to define it as a post request to a particular url. It also provides values for the form when the object you pass is complete AR object with values. But let’s look at it in a bit more detail, with examples:
 ```ruby
@@ -50,7 +50,7 @@ We can muck around with the format. You might have already noticed that our mode
 
 This changes a few things here. Firstly, because we provided an existing record it changes the path to be the appropriate update path, `’/movies/2’`, and it helps by pre-filling the form fields with the appropriate values for us. The button also indicates that it is updating this entry, and not creating a new entry. 
 
-*Rails Strong Parameters*
+### *Rails Strong Parameters*
 
 The last thing that happens when there is a model provided to `form_with`, is that the parameters relating to the model are wrapped in a hash of the same name. 
 This means that they look more like this:
@@ -72,7 +72,7 @@ The simplest way to show why this is necessary is with an example. Imagine a use
 
 This week will talk more about requiring certain parameters, and doing more checking on the front end, backend, and in the models so that we have even more control over which attributes must be provided, and also how to set defaults (and so on). 
 
-*My Debugging Errors*
+### *My Debugging Errors*
 
 So, to the big mistakes. My trouble started when I spent too much time assuming that I knew what the error was trying to tell me, and that it must relate to a lack of knowledge about partials. I should have looked at the *server logs* more carefully, and just double checked that I was sending the right parameters through to get the item to save, before worrying too much about the partial. I had assumed that the saving part was going ok, and that my problem was with the partial. This was exacerbated by the error I was getting, which referred to the `.erb`, and was telling me that a variable was not defined. So I kept trying to solve the issue there. 
 
