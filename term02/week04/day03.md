@@ -54,9 +54,13 @@ This changes a few things here. Firstly, because we provided an existing record 
 
 The last thing that happens when there is a model provided to `form_with`, is that the parameters relating to the model are wrapped in a hash of the same name. 
 This means that they look more like this:
+
 `{ … "movie"=>{"title"=>"Harry Potter", "length"=>"178", "year"=>"2006", "studio_id"=>"1"}, … }`
-Than this.
+
+Than this:
+
 `{ … “title"=>"Harry Potter", "length"=>"111", "year"=>"2011", "studio_id"=>"1", … } `
+
 The key difference is that one has the parameters wrapped in a `movie:` hash and in the other they are flattened into the main hash.
 
 This is where 
