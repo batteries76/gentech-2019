@@ -73,8 +73,12 @@ def movie_params
       params.require(:movie).permit(:title, :length, :year, :studio_id)
 end
 ```
-..comes into things. This method is doing a bit of double checking for us. It’s helping us to be safer with the parameters that are entered.  The `require` part refers to the outer wrapping of the parameters, in our case the `movie` part. If this is not provided then it will complain that no ‘movie’ has been provided.
+..comes into things. This method is doing a bit of double checking for us. It’s helping us to be safer with the parameters that are entered. 
+
+The `require` part refers to the outer wrapping of the parameters, in our case the `movie` part. If this is not provided then it will complain that no ‘movie’ has been provided.
+
 The `permit` part says that we will only accept particular parameters when creating a new entry into the table. If there are other parameters then this will error out. This process is known as *whitelisting*. 
+
 It is done because using hashes we can mass assign attributes for our AR objects - using AR we can do things like `Movie.create(params)`. This gives us some control over this process. 
 The simplest way to show why this is necessary is with an example. Imagine a user found a way to fill out a ‘new user’ form, but also send through an extra field that set them as admin (something like `admin => true`) as part of the same entry. If we don’t want this to happen then it’s a major vulnerability. So we can have the parameters we want whitelisted, and everything else is rejected. 
 
