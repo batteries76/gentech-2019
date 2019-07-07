@@ -35,7 +35,7 @@ Then again, if that’s what you want (passing through those variables), go for 
 
 ### *`form_with`*
 
-This gear with the `form_with` and the model is more Rails magic. It’s one way Rails provides to define it as a post request to a particular url. It also provides values for the form when the object you pass is complete AR object with values. But let’s look at it in a bit more detail, with examples:
+This gear with the `form_with` and the model involves more Rails magic. It’s one way Rails provides to define it as a post request to a particular url. It also provides values for the form when the object you pass is complete AR object with values. But let’s look at it in a bit more detail, with examples:
 ```ruby
 <%= form_with(url: '/movies', method: 'post', local: true) do |form| %>
 ```
