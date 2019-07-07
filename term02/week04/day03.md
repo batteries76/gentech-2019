@@ -52,7 +52,7 @@ We can muck around with the format. You might have already noticed that our mode
 <%= render partial: 'movies/form', locals: { movie: Movie.find(2), studio: @studio } %>
 ```
 
-This changes a few things here. Firstly, because we provided an existing record it changes the path to be the appropriate update path, `’/movies/2’`, and it helps by pre-filling the form fields with the appropriate values for us. The button also indicates that it is updating this entry, and not creating a new entry. Rails magic. Believe.
+This changes a few things here. Firstly, because we provided an existing record it changes the path to be the appropriate update path, `’/movies/2’`, and it helps by pre-filling the form fields with the appropriate values for us. The button also indicates that it is updating this entry, and not creating a new entry. Rails Magic. Believe.
 
 ### *Rails Strong Parameters*
 
