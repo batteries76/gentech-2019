@@ -35,7 +35,7 @@ Then again, if that’s what you want (passing through those variables), go for 
 
 ### *`form_with`*
 
-This gear with the `form_with` and the model involves more Rails magic. It’s one way Rails provides to define it as a post request to a particular url. It also provides values for the form when the object you pass is complete AR object with values. But let’s look at it in a bit more detail, with examples:
+This gear with the `form_with` and the model involves more Rails magic. It’s one way Rails provides to define it as a _post_ request to a particular url. It also provides values for the form when the object you pass is complete AR object with values. But let’s look at it in a bit more detail, with examples:
 ```ruby
 <%= form_with(url: '/movies', method: 'post', local: true) do |form| %>
 ```
@@ -45,10 +45,12 @@ Is much the same as writing:
 ```
 ..assuming that you have passed a Movie object through to the partial. Rails takes the object and creates the form that you need. It ‘knows’ the path and the method and produces them for you. I would *strongly recommend* that you use *inspect* to have a look at the HTML that is produced. It can help demystify things quite a lot. 
 
-Please ignore the `local: true` part for now - it refers to whether JS is being used, and we can come back to that later. It has *nothing* to do with the `locals:` (handy).
+Please ignore the `local: true` part for now - it refers to whether JS is being used, and we can come back to that later. It has *nothing* to do with the `locals:` (handy, innit).
 
 We can muck around with the format. You might have already noticed that our models are scoped to the views (`locals: { movie: Movie.new()..`), so we can do things like this:
+```ruby
 <%= render partial: 'movies/form', locals: { movie: Movie.find(2), studio: @studio } %>
+```
 
 This changes a few things here. Firstly, because we provided an existing record it changes the path to be the appropriate update path, `’/movies/2’`, and it helps by pre-filling the form fields with the appropriate values for us. The button also indicates that it is updating this entry, and not creating a new entry. 
 
