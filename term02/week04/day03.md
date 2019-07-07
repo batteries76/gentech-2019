@@ -31,7 +31,7 @@ In the partial you could do:
 ```
 In reality you don’t actually want to go down this path too often without a clear reason. One of the main rationales for partials is to have code that you can use multiple times, in a few different contexts. By specifying some variables that you will use on the partial side, you are locking down the partial to require those variables when the partial is called up. Furthermore, if you have changed the original partial, then this can collide when other parts of the application attempt to use it as if it was in its original condition. This is at the centre of my error (which I will get to later).
 
-Then again, if that’s what you want (passing through those variables), go for your life. Partials make your code cleaner, and sometimes you can’t avoid customising them. Just wanted to put that thought out there.
+Then again, if that’s what you want (passing through those variables), go for your life. You might just need to copy and paste that code into a new partial, fit for purpose. Partials make your code cleaner, and sometimes you can’t avoid customising them. Just wanted to put that thought out there.
 
 ### *`form_with`*
 
