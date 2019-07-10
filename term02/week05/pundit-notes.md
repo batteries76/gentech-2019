@@ -131,10 +131,9 @@ class TrackPolicy < ApplicationPolicy
     def destroy?
         user.role == Role.find(3)
     end
-
 end
 ```
-Or we could check if the user added the track (assuming the relationship is in the structure):
+Or we could check if the user added the track (assuming the relationship is in the structure of the instance passed):
 ```ruby
 class TrackPolicy < ApplicationPolicy
 
@@ -143,12 +142,33 @@ class TrackPolicy < ApplicationPolicy
     end
 
     def destroy?
-        user == @track.user
+        user == record.user
     end
 
 end
 ```
-Remember, if we don't want these methods to run at all then, just *don't* have `authorize(@blah)` in the method. 
+Here the `record` is whatever was passed in to `authorize`, and emanates from the `ApplicationPolicy`. We have access to the instance under the alias `record` because we are inheriting from the ApplicationPolicy. 
+
+If we want that variable to have a more policy appropriate name for the method that we are in, we need to overwrite the `initialize` method:
+```ruby
+class TrackPolicy
+    attr_reader :user, :track
+
+    def initialize(user, track)
+        @user = user
+        @track = track
+    end
+
+    def destroy?
+        user == track.user
+    end
+
+end
+```
+
+There are obviously a few more things that require explanation. Why `user` and not `current_user`? Pundit gets `user` from `current_user`. Where is `track` coming from in the policy class? When Pundit uses our code, it runs the initialize with the resource that was passed to `authorize`, where it is referred to as `@record`, but in ours will be `track` (via magic - although `@track` is also available). Why can you pass a class or an instance? Really all that means is that you will access to the model itself, rather than just an instance of the model. The `initialize` method will just assign whatever is passed through to the `@record` instance variable (which as discussed is also in `record`), and in the class case it will be a class, and the instance case it will be a specific instance.
+
+*_Remember_*, if we don't want these methods to run at all, just *don't* have `authorize(@blah)` in the controller method. 
 
 There are obviously a few more things that require explanation. Why `user` and not `current_user`? Pundit gets `user` from `current_user`. Where is `@track` coming from in the policy class? When Pundit uses our code, it runs the initialize with the resource that was passed to `authorize`, where it is referred to as `@record`, but in ours will be `@track`, or whatever we need to help make the decision about whether the user can continue. Why can you pass a Class or an instance? Ahhhh.. magic. (No, I don't know, Brian.)
 
