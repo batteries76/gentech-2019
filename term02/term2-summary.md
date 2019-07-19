@@ -16,7 +16,7 @@ Please browse through all of this information at least once to see if the topics
     - [Seeding](#seeding)
     - [Pundit (authorization)](#authorisation-pundit)
 - [What's next?](#so-where-are-we-now-and-what's-left?)
-    - [Adding third party stuff](#what-do-image-uploads-and-stripe-have-in-common?)
+    - [Adding third party stuff](#what-do-image-uploads-and-stripe-have-in-common)
         - [Image uploads](#image-uploads)
         - [Stripe](#stripe)
 - [Extended example](#a-detailed-example)
