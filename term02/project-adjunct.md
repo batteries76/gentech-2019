@@ -23,6 +23,17 @@ They seem to have more of the technical quality that some might prefer.
 Trello is a useful tool for keeping track of tasks. If you kick it off with 'To do', 'Doing', and 'Done', and then make some new column as they come up organically. When you have a heap for one aspect of the app you might make a new column. You can also assign priorities (should, certainly later as time gets tight), and link certain tasks to individuals. 
 - https://trello.com/
 
+### User stories
+User stories help define what you hope your app will achieve for particular users. They have the pattern:
+
+As a **_user-type_** I should be able to _**do-something**_ (or similar)
+
+You also can write up some detailed ideas of what types of people you expect to make use of your app.
+These are decent resources:
+- http://www.agilemodeling.com/artifacts/userStory.htm
+- http://www.mountaingoatsoftware.com/agile/user-stories
+- https://www.atlassian.com/agile/project-management/user-stories
+
 ### Example
 This is an example app, and the README might be useful as something to aim at. It's a very thorough job. 
 - https://github.com/JoshTeperman/rails_coding_tutor
