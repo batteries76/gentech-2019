@@ -34,6 +34,13 @@ These are decent resources:
 - http://www.mountaingoatsoftware.com/agile/user-stories
 - https://www.atlassian.com/agile/project-management/user-stories
 
+### Git Collaboration
+Some info (solid article):
+https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67
+The challenge:
+- https://gist.github.com/anharathoi/9fe9bd883831dbf167a99de1c1010e73
+
+
 ### Example
 This is an example app, and the README might be useful as something to aim at. It's a very thorough job. 
 - https://github.com/JoshTeperman/rails_coding_tutor
