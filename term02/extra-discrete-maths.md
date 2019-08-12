@@ -3,8 +3,9 @@
 
 ## Sum of
 
-First we need a domain - a set of values to iterate over. Here we are going to sum the result of that domain when passed through a function.
+To get the sum of a series or set, first we need a domain - a set of values to iterate over. Here we are going to sum the result of that domain when passed through a function.
 
+Here is the set that will be our domain:
 <pre>
 X = [4, 7, 9, 2, 1]
 </pre>
