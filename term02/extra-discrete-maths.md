@@ -14,7 +14,7 @@ This is a set of integers. We are representing it as an array, which is really j
 
 This is the symbol that tells us that we are getting the sum of something. Mostly (for our purposes) we will be getting the sum of a finite series of numbers. Eg, 
 <pre>
-<sub>             4</sub>
+<sup>             4</sup>
 f(X) = ⎲ x<sub>i</sub><sup>2</sup>
        ⎳
 <sup>           i=0</sup>
