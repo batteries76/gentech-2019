@@ -1,7 +1,7 @@
 
-## Discrete Maths Extra Notation Topics
+# Discrete Maths Extra Notation Topics
 
-### Sum of
+## Sum of
 
 First we need a domain - a set of values to iterate over. Here we are going to sum the result of that domain when passed through a function.
 
@@ -78,3 +78,46 @@ and then..
 5 + 9 + 7 + 17 + 5
 </pre>
 which is: ```43```
+
+## Set Building 
+
+Let's take a example as a starting point. 
+
+Here is a possible set:
+<pre>
+{ x | x ϵ ℕ; x < 206; x ≥ 202 }
+</pre>
+
+We can read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (is an element of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 200. 
+
+The natural numbers are all the non-negative integers (meaning 0 and the positive integers). 
+
+The set we get is:
+<pre>
+X = { 202, 203, 204, 205 }
+</pre>
+
+One more example:
+<pre>
+{ x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 }
+</pre>
+
+Here we read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (is an element of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
+
+This time the set we get is:
+<pre>
+X = { 28, 35, 42, 49 }
+</pre>
+
+Each element to the right of the ```|``` must be satisfied, and we can add logical operators in here. 
+
+For example, to extend the above example:
+<pre>
+{ x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 ∧ x mod 6 = 0 }
+</pre>
+
+Here the last condition is that the ```x```s involved conform to the other conditions that we discussed, but also be divisible by 7 AND 6. 
+
+
+What is the resultant set?
+
