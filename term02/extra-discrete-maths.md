@@ -88,7 +88,7 @@ Here is a possible set:
 { x | x ϵ ℕ; x < 206; x ≥ 202 }
 </pre>
 
-We can read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (is an element of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 200. 
+We can read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 200. 
 
 The natural numbers are all the non-negative integers (meaning 0 and the positive integers). 
 
@@ -102,7 +102,7 @@ One more example:
 { x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 }
 </pre>
 
-Here we read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (is an element of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
+Here we read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
 
 This time the set we get is:
 <pre>
