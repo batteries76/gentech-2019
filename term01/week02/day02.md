@@ -1,4 +1,7 @@
-# Week 2, Day 2 — Methods
+# Week 2, Day 2 
+
+## Methods
+
 ## Outcomes
 Students can construct methods that set or get values, take parameters and return information via a method. Can complete a unit test on a method and understand the value of test driven development (TDD). Learn about style guides & naming method naming conventions.
 ## On successful completion of this unit students will be able to:
