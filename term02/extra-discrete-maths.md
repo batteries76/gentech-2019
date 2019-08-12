@@ -13,7 +13,7 @@ This is a set of integers. We are representing it as an array, which is really j
 
 <b>```Σ```</b>
 
-This is the symbol that tells us that we are getting the sum of something. Mostly (for our purposes) we will be getting the sum of a finite series of numbers. Eg, 
+This is the symbol that tells us that we are getting the sum of something. In our case, we will be getting the sum of a finite series of numbers. Eg, 
 <pre>
 <sup>           4</sup>
 f(X) = ⎲ x<sub>i</sub><sup>2</sup>
@@ -31,7 +31,7 @@ part of the equation.
 
 It looks messy, but we can treat the x like a variable, and the little ```i``` as the iterator.
 
-In this world (the Discrete Maths world), there are no fractions. So here we start at 0, and move up by steps, iterating through our domain of elements. So we are going to iterate through our array, applying the function to each element. And we are going to sum it all. 
+In this world (the Discrete Maths world), there are no fractions. So here we start at 0, and move up by steps, iterating through our domain of elements. So we are going to iterate through our array, applying the function to each element. And finally we are going to sum it all up. 
 
 The top of the ```Σ``` is the number that our <sub>i</sub> is going to stop at. 
 
