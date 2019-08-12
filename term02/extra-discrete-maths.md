@@ -35,7 +35,7 @@ In this world (the Discrete Maths world), there are no fractions. So here we sta
 
 At the bottom of the ```Σ``` is the starting point for our iterator, our <sub>i</sub>, and on top of the ```Σ``` is the number that our <sub>i</sub> is going to stop at. 
 
-It's like a loop with an accumulator. We have a counter that will help to iterate, with a starting value and an terminating value, and we have a function which is like a bit of code within the loop. And we are going to return a value that has built up in the loop.
+It's like a loop with an accumulator. We have a counter that will help to iterate, with a starting value and a terminating value, and we also have a function which is like a bit of code within the loop. We are then going to 'return' a value that has built up in the loop.
 
 Breaking it down the steps would be:
 <pre>
@@ -51,7 +51,7 @@ and then..
 </pre>
 which is: ```151```
 
-Let's try one more example: Let's say that we are given this version:
+Let's try one more example. Let's say that we are given this version:
 
 Our set is:
 <pre>
@@ -59,7 +59,6 @@ X = [1, 3, 2, 7, 1]
 </pre>
 
 and our function to calculate is:
-
 <pre>
 <sup>           4</sup>
 f(X) = ⎲ 2x<sub>i</sub> + 3
@@ -89,7 +88,7 @@ Here is a possible set:
 { x | x ϵ ℕ; x < 206; x ≥ 202 }
 </pre>
 
-We can read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 200. 
+We can read this as that we are buiding a set of ```x```s, where the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 200. 
 
 The natural numbers are all the non-negative integers (meaning 0 and the positive integers). 
 
@@ -103,7 +102,7 @@ One more example:
 { x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 }
 </pre>
 
-Here we read this off that we are buiding a set of ```x```s, where the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
+Here we read this off as that we are buiding a set of ```x```s, where the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
 
 This time the set we get is:
 <pre>
