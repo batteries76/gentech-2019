@@ -109,7 +109,7 @@ This time the set we get is:
 X = { 28, 35, 42, 49 }
 </pre>
 
-Each element to the right of the ```|``` must be satisfied, and we can add logical operators in here. 
+Each element to the right of the ```|``` must be satisfied, and we can also add logical operators in here. 
 
 For example, to extend the above example:
 <pre>
@@ -124,7 +124,7 @@ What is the resultant set?
 
 This is the final part of the confusing syntax sojourn, and it's just a twist on the last section. 
 
-In this case we are going to define a set of relations. A relation is just an input with an output, and can be represented as a pair of numbers like this: ```(2,7)```. All we are saying here is that 2 is related to 7 (in some way).
+In this case we are going to define a set of relations. A relation is an input with an output, and can be represented as a pair of numbers like this: ```(2,7)```. All we are saying here is that 2 is related to 7 (in some way).
 
 We could now define a set of relations:
 <pre>
