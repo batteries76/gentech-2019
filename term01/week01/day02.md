@@ -1,4 +1,4 @@
-# Day 02 A — Terminal & Setup
+# Week 1, Day 2 A — Terminal & Setup
 ## Outcomes
 The idea is to reveal how the terminal commands work to help them understand a developer environment before installing ruby. This gives the student a good grounding on how to deal with files and folders within the terminal and any of the terminal commands. It isn't essential they remember every command - but they do need to know
 ## On successful completion of this unit students will be able to:

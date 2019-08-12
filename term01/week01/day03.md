@@ -1,4 +1,4 @@
-# Day 03 — Arrays, if/else, loops
+# Week 1, Day 3 — Arrays, if/else, loops
 ## Outcomes
 Students have a basic understanding of arrays, ranges, truth statements, operators, switch statement, ternary operation (expressions) and loops
 ## Review

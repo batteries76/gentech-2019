@@ -1,4 +1,4 @@
-# Day 04 — Hashes 
+# Week 2, Day 1 — Hashes 
 ## Outcomes
 Students to know how to manipulate ruby hashes, how they can be used to represent real world objects and a comprehension of symbols and what they represent.
 Students to know about datetime, date & time data type / object

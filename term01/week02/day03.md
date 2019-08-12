@@ -1,4 +1,4 @@
-# Week 3, Day 3 — OOP (Object Oriented Programming)
+# Week 2, Day 3 — OOP (Object Oriented Programming)
 ## Outcomes
 Students to have a basic understanding OOP
 
