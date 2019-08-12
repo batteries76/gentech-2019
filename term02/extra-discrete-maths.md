@@ -33,7 +33,7 @@ It looks messy, but we can treat the x like a variable, and the little ```i``` a
 
 In this world (the Discrete Maths world), there are no fractions. So here we start at 0, and move up by steps, iterating through our domain of elements. So we are going to iterate through our array, applying the function to each element. And finally we are going to sum it all up. 
 
-The top of the ```Σ``` is the number that our <sub>i</sub> is going to stop at. 
+At the bottom of the ```Σ``` is the starting point for our iterator, our <sub>i</sub>, and on top of the ```Σ``` is the number that our <sub>i</sub> is going to stop at. 
 
 It's like a loop with an accumulator. We have a counter that will help to iterate, with a starting value and an terminating value, and we have a function which is like a bit of code within the loop. And we are going to return a value that has built up in the loop.
 
