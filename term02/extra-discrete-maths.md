@@ -116,8 +116,27 @@ For example, to extend the above example:
 { x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 ∧ x mod 6 = 0 }
 </pre>
 
-Here the last condition is that the ```x```s involved conform to the other conditions that we discussed, but also be divisible by 7 AND 6. 
-
+Here the last condition is that the ```x```s involved conform to the other conditions that we discussed, but also be divisible by 7 _and_ 6. 
 
 What is the resultant set?
 
+## Sets of Relations
+
+This is the final part of the confusing syntax sojourn, and it's just a twist on the last section. 
+
+In this case we are going to define a set of relations. A relation is just an input with an output, and can be represented as a pair of numbers like this: ```(2,7)```. All we are saying here is that 2 is related to 7 (in some way).
+
+We could now define a set of relations:
+<pre>
+X = {(2,7), (3,1), (3,0), (10,101), (4,6)}
+</pre>
+which is like a list of inputs and outputs.
+
+Using a similar syntax as before, we could define a set like this:
+<pre>
+{(x,y) ϵ T | x ϵ ℕ; y ϵ ℕ; y ≥ 6x + 1 }
+</pre>
+
+Here we are saying that the relation ```T``` (just a name for a relation) is defined by the following conditions: the inputs must come from the natural numbers, as must the outputs, and the output must also be greater than 6 times the input, plus 1.
+
+The resultant set contains only one member from ```X```, and looks like this: ```{(10, 101)}```.
