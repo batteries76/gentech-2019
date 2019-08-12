@@ -60,10 +60,10 @@ X = [1, 3, 2, 7, 1]
 and our function to calculate is:
 
 <pre>
-<sub>         4</sub>
+<sup>           4</sup>
 f(X) = ⎲ 2x<sub>i</sub> + 3
        ⎳
-<sup>        i=0</sup>
+<sup>          i=0</sup>
 </pre>
 
 <pre>
