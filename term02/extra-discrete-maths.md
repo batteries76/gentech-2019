@@ -14,10 +14,10 @@ This is a set of integers. We are representing it as an array, which is really j
 
 This is the symbol that tells us that we are getting the sum of something. Mostly (for our purposes) we will be getting the sum of a finite series of numbers. Eg, 
 <pre>
-<sup>         4</sup>
+<sup>           4</sup>
 f(X) = ⎲ x<sub>i</sub><sup>2</sup>
        ⎳
-<sup>         i=0</sup>
+<sup>          i=0</sup>
 </pre>
 
 This is possibly very confusing notation, but bear with me for a minute.
