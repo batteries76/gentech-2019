@@ -109,7 +109,7 @@ This time the set we get is:
 X = { 28, 35, 42, 49 }
 </pre>
 
-Each element to the right of the ```|``` must be satisfied, and we can also add logical operators in here. 
+Each condition to the right of the ```|``` must be satisfied, and we can also add logical operators in here. 
 
 For example, to extend the above example:
 <pre>
