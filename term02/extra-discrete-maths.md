@@ -116,7 +116,7 @@ For example, to extend the above example:
 { x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 ∧ x mod 6 = 0 }
 </pre>
 
-Here the last condition is that the ```x```s involved conform to the other conditions that we discussed, but also be divisible by 7 _and_ 6. 
+Here the last condition is that the ```x```s involved conform to the other conditions that we discussed, but also be divisible by 7 **_and_** 6. 
 
 What is the resultant set?
 
