@@ -85,10 +85,10 @@ Let's take a example as a starting point.
 
 Here is a possible set:
 <pre>
-{ x | x ϵ ℕ; x < 206; x ≥ 202 }
+{ x | x ∈ ℕ; x < 206; x ≥ 202 }
 </pre>
 
-We can read this as that we are buiding a set of ```x```s, **where** the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 202. 
+We can read this as that we are buiding a set of ```x```s, **where** the ```x```s in question come from (are elements of, ```∈```) all of the natural numbers (```ℕ```), are less than 206, and greater than or equal to 202. 
 
 The natural numbers are all the non-negative integers (meaning 0 and the positive integers). 
 
@@ -99,10 +99,10 @@ X = { 202, 203, 204, 205 }
 
 One more example:
 <pre>
-{ x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 }
+{ x | x ∈ ℕ; x < 50; x ≥ 25; x mod 7 = 0 }
 </pre>
 
-Here we read this off as that we are buiding a set of ```x```s, **where** the ```x```s in question come from (are elements of, ```ϵ```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
+Here we read this off as that we are buiding a set of ```x```s, **where** the ```x```s in question come from (are elements of, ```∈```) all of the natural numbers (```ℕ```), are less than 50, and greater than or equal to 25, but also are evenly divisible by 7. 
 
 This time the set we get is:
 <pre>
@@ -113,7 +113,7 @@ Each element to the right of the ```|``` must be satisfied, and we can also add 
 
 For example, to extend the above example:
 <pre>
-{ x | x ϵ ℕ; x < 50; x ≥ 25; x mod 7 = 0 ∧ x mod 6 = 0 }
+{ x | x ∈ ℕ; x < 50; x ≥ 25; x mod 7 = 0 ∧ x mod 6 = 0 }
 </pre>
 
 Here the last condition is that the ```x```s involved conform to the other conditions that we discussed, but also be divisible by 7 **_and_** 6. 
@@ -134,7 +134,7 @@ which is like a list of inputs and outputs.
 
 Using a similar syntax as before, we could define a set like this:
 <pre>
-{(x,y) ϵ T | x ϵ ℕ; y ϵ ℕ; y ≥ 6x + 1 }
+{(x,y) ∈ T | x ∈ ℕ; y ∈ ℕ; y ≥ 6x + 1 }
 </pre>
 
 Here we are saying that the relation ```T``` (just a name for a relation) is defined by the following conditions: the inputs must come from the natural numbers, as must the outputs, and the output must also be greater than 6 times the input, plus 1.
@@ -148,7 +148,7 @@ X = {(2,-66), (3,3), (3,300), (10,11), (6,6), (8,8)}
 
 Another example on the same set of relations is:
 <pre>
-{(x,y) ϵ T | x ϵ ℕ; y ϵ ℕ; y = x }
+{(x,y) ∈ T | x ∈ ℕ; y ∈ ℕ; y = x }
 </pre>
 
 Where the resultant set is 
