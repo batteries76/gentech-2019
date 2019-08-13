@@ -140,3 +140,18 @@ Using a similar syntax as before, we could define a set like this:
 Here we are saying that the relation ```T``` (just a name for a relation) is defined by the following conditions: the inputs must come from the natural numbers, as must the outputs, and the output must also be greater than 6 times the input, plus 1.
 
 The resultant set contains only one member from ```X```, and looks like this: ```{(10, 101)}```.
+
+Here is another example set of relations:
+<pre>
+X = {(2,-66), (3,3), (3,300), (10,11), (6,6), (8,8)}
+</pre>
+
+Another example on the same set of relations is:
+<pre>
+{(x,y) ϵ T | x ϵ ℕ; y ϵ ℕ; y = x }
+</pre>
+
+Where the resultant set is 
+<pre>
+{(3,3), (6,6), (8,8)}
+</pre>
