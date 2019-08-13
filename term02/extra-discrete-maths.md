@@ -11,7 +11,7 @@ X = [4, 7, 9, 2, 1]
 </pre>
 This is a set of integers. We are representing it as an array, which is really just a type of set.
 
-<b>```Σ```</b>
+### <b>```Σ```</b>
 
 This is the symbol that tells us that we are getting the sum of something. In our case, we will be getting the sum of a finite series of numbers. Eg, 
 <pre>
